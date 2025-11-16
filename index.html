@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esencia Perfumes - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- --------------------------
+    // 1. HEADER Y NAVEGACIÓN
+    // -------------------------- -->
+    <header class="header">
+        <div class="container navbar-content">
+            <div class="logo">
+                <a href="index.html" aria-label="Volver a la página principal">
+                    <img src="img/logo.png" alt="Logo de Esencia Perfumes" onerror="this.src='https://placehold.co/35x35/121212/ffffff?text=E'">
+                    Esencia
+                </a>
+            </div>
+            
+            <nav class="main-nav" role="navigation" aria-label="Navegación principal del sitio">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="reseñas.html">Reseñas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <!-- Botón de Carrito -->
+                <button id="cart-button" class="cart-button" aria-label="Abrir carrito de compras">
+                    <svg viewBox="0 0 24 24" class="icon-svg" style="width: 28px; height: 28px;"><path d="M17 18C17 19.1 16.1 20 15 20C13.9 20 13 19.1 13 18C13 16.9 13.9 16 15 16C16.1 16 17 16.9 17 18ZM1.5 2V4H3L6.6 11.59L5.26 14.16C5.04 14.54 4.93 15 4.93 15.5C4.93 16.32 5.6 17 6.42 17H18V15H6.42L7.17 13.59L16.2 11.82L19.5 5H6.21L5.8 4H1.5M19 18C19 19.1 18.1 20 17 20C15.9 20 15 19.1 15 18C15 16.9 15.9 16 17 16C18.1 16 19 16.9 19 18Z"/></svg>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+
+                <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <div class="hamburger-icon">
+                        <div class="bar-top"></div>
+                        <div class="bar-middle"></div>
+                        <div class="bar-bottom"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- --------------------------
+        // 2. BANNER CARRUSEL (3 Slides)
+        // -------------------------- -->
+        <section id="banner-carousel" class="banner-carousel" aria-label="Carrusel de ofertas destacadas">
+            <div class="carousel-slides">
+<!--                 <div class="carousel-slide slide-1" role="group" aria-roledescription="slide" aria-label="1 de 3: Nueva Colección">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h2></h2>
+                        <p>Aromas únicos inspirados en la naturaleza.</p>      
+                        <br>
+                        <a href="catalogo.html" class="btn btn-secondary">Ver Catálogo</a>
+                    </div>
+                </div> -->
+                <div class="carousel-slide slide-2" role="group" aria-roledescription="slide" aria-label="2 de 3: Oferta Especial">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h2>Descubre Tu Esencia</h2>
+                        <p>Explora Nuestra Exclusiva Coleccion De Perfumes</p>
+                        <br>
+                        <a href="catalogo.html" class="btn btn-primary">Ver Catalogo</a>
+                    </div>
+                </div>
+                <div class="carousel-slide slide-3" role="group" aria-roledescription="slide" aria-label="3 de 3: Noche de Jazmín">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h2>¡Envio Gratis!</h2>
+                            <p>En compras superiores a $300.000 COP.</p> 
+                        <br>
+                        <a href="catalogo.html" class="btn btn-secondary">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control prev-btn" aria-controls="banner-carousel" aria-label="Anterior slide">
+                <svg viewBox="0 0 24 24" class="icon-svg" role="presentation"><path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z"/></svg>
+            </button>
+            <button class="carousel-control next-btn" aria-controls="banner-carousel" aria-label="Siguiente slide">
+                <svg viewBox="0 0 24 24" class="icon-svg" role="presentation"><path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/></svg>
+            </button>
+
+            <!-- Paginación (Puntos) -->
+            <div class="carousel-dots" role="tablist">
+                <!-- Los puntos son generados por JS -->
+            </div>
+        </section>
+
+        <!-- --------------------------
+        // 3. TOP 4 PERFUMES (Más Vendidos)
+        // -------------------------- -->
+        <section id="top-4-perfumes" class="container">
+            <h2 class="text-center">Nuestros Top 4 Perfumes Más Vendidos</h2>
+            <p class="text-center" style="margin-bottom: 3rem;">Los favoritos de nuestros clientes, perfectos para cualquier ocasión.</p>
+            
+            <div class="product-list-wrapper">
+                <div class="product-list">
+                    <!-- Producto 1: Aura Noire -->
+                    <div class="product-card">
+                        <img src="img/catalogo/perfumecatalogo1.png" alt="Perfume Aura Noire">
+                        <div class="product-info">
+                            <h3>Velvet Rose Essence</h3>
+                            <p class="product-price">COP 100.000</p>
+                            <button class="btn btn-primary" onclick="addToCart(1)" aria-label="Añadir Aura Noire al carrito">
+                                Añadir al Carrito
+                            </button>
+                            <button class="btn btn-whatsapp whatsapp-buy-btn" data-product-name="Aura Noire" data-product-price="COP 45.000" aria-label="Comprar Aura Noire por WhatsApp">
+                                Comprar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Producto 2: Lirio Dorado -->
+                    <div class="product-card">
+                        <img src="img/catalogo/perfumecatalogo3.png" alt="Perfume Lirio Dorado">
+                        <div class="product-info">
+                            <h3>Chrome Tradicional EDT</h3>
+                            <p class="product-price">COP 252.890</p>
+                            <button class="btn btn-primary" onclick="addToCart(2)" aria-label="Añadir Lirio Dorado al carrito">
+                                Añadir al Carrito
+                            </button>
+                            <button class="btn btn-whatsapp whatsapp-buy-btn" data-product-name="Lirio Dorado" data-product-price="COP 52.000" aria-label="Comprar Lirio Dorado por WhatsApp">
+                                Comprar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Producto 3: Mar Azul -->
+                    <div class="product-card">
+                        <img src="img/catalogo/perfumecatalogo6.png" alt="Perfume Mar Azul">
+                        <div class="product-info">
+                            <h3>Eternity For Men Calvin Klein</h3>
+                            <p class="product-price">COP  350.000</p>
+                            <button class="btn btn-primary" onclick="addToCart(3)" aria-label="Añadir Mar Azul al carrito">
+                                Añadir al Carrito
+                            </button>
+                            <button class="btn btn-whatsapp whatsapp-buy-btn" data-product-name="Mar Azul" data-product-price="COP 48.000" aria-label="Comprar Mar Azul por WhatsApp">
+                                Comprar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Producto 4: Noche de Jazmín -->
+                    <div class="product-card">
+                        <img src="img/catalogo/perfumecatalogo5.png" alt="Perfume Noche de Jazmín">
+                        <div class="product-info">
+                            <h3>Montblanc Legend Blue</h3>
+                            <p class="product-price">COP 282000</p>
+                            <button class="btn btn-primary" onclick="addToCart(4)" aria-label="Añadir Noche de Jazmín al carrito">
+                                Añadir al Carrito
+                            </button>
+                            <button class="btn btn-whatsapp whatsapp-buy-btn" data-product-name="Noche de Jazmín" data-product-price="COP 60.000" aria-label="Comprar Noche de Jazmín por WhatsApp">
+                                Comprar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="catalogo.html" class="btn btn-secondary" aria-label="Ver Catálogo Completo">Ver Catálogo Completo</a>
+            </div>
+            <br><br>
+        </section>
+        
+        <!-- --------------------------
+        // 4. GALERÍA REDUCIDA (Preview)
+        // -------------------------- -->
+        <section id="gallery-preview" class="container" style="background-color: var(--color-accent);">
+            <h2 class="text-center" style="margin-bottom: 2rem;">Un Vistazo a Nuestra Galería </h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="img/galeria/foto3.png" alt="Vista de fragancia 1"></div>
+                <div class="gallery-item"><img src="img/galeria/foto6.png" alt="Vista de fragancia 2"></div>
+                <div class="gallery-item"><img src="img/galeria/foto5.png" alt="Vista de fragancia 3"></div>
+                <div class="gallery-item"><img src="img/galeria/foto8.png" alt="Vista de fragancia 4"></div>
+            </div>
+            <br>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="galeria.html" class="btn btn-secondary" aria-label="Ver todas las fotos de la galería">Ver Galería Completa</a>
+            </div>
+            <br><br>
+        </section>
+
+        <!-- --------------------------
+        // 5. CARRUSEL DE RESEÑAS (Testimonios)
+        // -------------------------- -->
+        <section id="reviews-slider" class="reviews-slider container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Lo Que Dicen Nuestros Clientes</h2>
+            
+            <div class="reviews-slides" role="region" aria-live="polite" aria-label="Testimonios de clientes en carrusel">
+                <!-- Las reseñas se llenan dinámicamente con JS -->
+            </div>
+            
+            <div class="reviews-dots">
+                <!-- Los puntos son generados por JS -->
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="reseñas.html" class="btn btn-primary" aria-label="Ver todas las reseñas de clientes">Ver Todas las Reseñas</a>
+            </div>
+            <br><br>
+        </section>
+
+        <!-- --------------------------
+        // 6. CONTACTO RÁPIDO
+        // -------------------------- -->
+        <section class="container" style="padding-top: 0;">
+            <div class="contact-content">
+                <h1 class="text-center" style="font-size: 2rem;">Hablemos por WhatsApp</h1>
+                <p class="text-center" style="margin-bottom: 2rem;">Llena el formulario y te abriremos un chat de WhatsApp automáticamente con tu mensaje pre-llenado.</p>
+                
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono (con código de país) *</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Ej: +573001234567" aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje / Consulta *</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..." aria-required="true"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-whatsapp w-full" style="width: 100%; margin-top: 1.5rem;" aria-label="Enviar mensaje y abrir chat de WhatsApp">
+                         <svg viewBox="0 0 24 24" class="whatsapp-icon"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.2 21.61L7.14 20.35C8.56 21.16 10.23 21.6 12.04 21.6C17.5 21.6 21.95 17.15 21.95 11.69C21.95 6.23 17.5 2 12.04 2ZM17.18 16.14C16.84 16.73 15.34 17.53 15.08 17.65C14.82 17.77 14.65 17.77 14.28 17.65C13.92 17.53 12.98 17.19 11.83 16.1C10.68 15.02 9.77 13.62 9.5 13.25C9.23 12.89 9.33 12.7 9.59 12.44C9.83 12.21 10.09 11.85 10.35 11.53C10.6 11.2 10.66 11 10.77 10.74C10.89 10.48 10.83 10.36 10.73 10.15C10.65 9.94 10.01 8.35 9.75 7.78C9.49 7.21 9.22 7.29 9.04 7.28C8.85 7.27 8.64 7.26 8.44 7.26C8.24 7.26 7.97 7.31 7.73 7.57C7.49 7.83 6.81 8.47 6.81 9.95C6.81 11.43 7.86 12.87 8 13.06C8.14 13.25 10.03 16.29 12.9 17.53C15.22 18.5 15.82 18.32 16.27 18.29C16.71 18.25 17.65 17.67 17.85 17.11C18.06 16.55 18.06 16.07 18 15.98C17.95 15.89 17.34 15.65 17.18 16.14Z"/></svg>
+                        Abrir WhatsApp con mi mensaje
+                    </button>
+                </form>
+
+                <p class="text-center" style="margin-top: 1.5rem; font-size: 0.9rem;">
+                    ¿No tienes WhatsApp? 
+                    <a href="mailto:contacto@tiendaperfumes.com" class="btn-link" style="font-weight: bold;">Contáctanos por correo.</a>
+                </p>
+            </div>
+        </section>
+        
+        <!-- Toast de confirmación (oculto por defecto) -->
+        <div id="toast-message" role="alert" aria-live="assertive"></div>
+    </main>
+
+    <!-- --------------------------
+    // 7. FOOTER
+    // -------------------------- -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links" aria-label="Redes sociales">
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" class="icon-svg"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2.7c-0.4 0-0.7 0.3-0.7 0.7s0.3 0.7 0.7 0.7h1.4c0.4 0 0.7-0.3 0.7-0.7s-0.3-0.7-0.7-0.7H7.6zm9.8 0c-0.4 0-0.7 0.3-0.7 0.7s0.3 0.7 0.7 0.7h1.4c0.4 0 0.7-0.3 0.7-0.7s-0.3-0.7-0.7-0.7h-1.4zM12 8.7c2.5 0 4.6 2.1 4.6 4.6s-2.1 4.6-4.6 4.6-4.6-2.1-4.6-4.6 2.1-4.6 4.6-4.6zm0 1.5c-1.7 0-3.1 1.4-3.1 3.1s1.4 3.1 3.1 3.1 3.1-1.4 3.1-3.1-1.4-3.1-3.1-3.1z"/></svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" class="icon-svg"><path d="M12 2.04C6.52 2.04 2 6.48 2 11.96C2 17.44 6.52 21.88 12 21.88C17.48 21.88 22 17.44 22 11.96C22 6.48 17.48 2.04 12 2.04zm3 7.84h-1.5v-1c0-0.55 0.45-1 1-1h0.5v-2h-2c-1.66 0-3 1.34-3 3v1h-1v2h1v4h2v-4h1.5l0.5-2z"/></svg>
+                </a>
+                <a href="#" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" class="icon-svg"><path d="M21 7.95c-1.28 0.5-2.66 0.84-4.11 0.99v-2.15c0.75-0.12 1.48-0.32 2.16-0.58 0.17 0.5 0.31 1.01 0.42 1.54zM9 11.95v-4h3.08v3.62c0.7-0.18 1.45-0.27 2.22-0.27v3.08h-2.25c-0.03 1.13-0.95 2.03-2.1 2.03s-2.07-0.9-2.1-2.03H5v-3.08h4zM15 15.95c1.15 0 2.07 0.9 2.1 2.03h3.9c-0.03-1.8-0.94-3.32-2.31-4.25 0.86-0.63 1.54-1.39 2.03-2.23V7.95c-1.63 0-3.04-0.84-3.84-2.04-0.8 1.2-2.21 2.04-3.84 2.04h-4v4h-4v3.08h4c0 2.25 1.83 4.08 4.08 4.08s4.08-1.83 4.08-4.08V11.95h-2.25c0.03 1.13-0.95 2.03-2.1 2.03s-2.07-0.9-2.1-2.03z"/></svg>
+                </a>
+            </div>
+            <p>&copy; 2024 Esencia Perfumes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DEL CARRITO FLOTANTE -->
+    <div id="cart-modal" class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-header">
+        <div class="cart-sidebar">
+            <div id="cart-header" class="cart-header">
+                <h2>Carrito de Compras</h2>
+                <button id="cart-close" class="cart-close" aria-label="Cerrar carrito">&times;</button>
+            </div>
+            <div id="cart-items-container" class="cart-items">
+                <!-- Los items del carrito se renderizan aquí -->
+            </div>
+            <div id="cart-footer" class="cart-footer" style="display:none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">COP 0</span>
+                </div>
+                <button id="whatsapp-checkout-btn" class="btn btn-whatsapp w-full" style="width: 100%;">
+                    <svg viewBox="0 0 24 24" class="whatsapp-icon"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.2 21.61L7.14 20.35C8.56 21.16 10.23 21.6 12.04 21.6C17.5 21.6 21.95 17.15 21.95 11.69C21.95 6.23 17.5 2 12.04 2ZM17.18 16.14C16.84 16.73 15.34 17.53 15.08 17.65C14.82 17.77 14.65 17.77 14.28 17.65C13.92 17.53 12.98 17.19 11.83 16.1C10.68 15.02 9.77 13.62 9.5 13.25C9.23 12.89 9.33 12.7 9.59 12.44C9.83 12.21 10.09 11.85 10.35 11.53C10.6 11.2 10.66 11 10.77 10.74C10.89 10.48 10.83 10.36 10.73 10.15C10.65 9.94 10.01 8.35 9.75 7.78C9.49 7.21 9.22 7.29 9.04 7.28C8.85 7.27 8.64 7.26 8.44 7.26C8.24 7.26 7.97 7.31 7.73 7.57C7.49 7.83 6.81 8.47 6.81 9.95C6.81 11.43 7.86 12.87 8 13.06C8.14 13.25 10.03 16.29 12.9 17.53C15.22 18.5 15.82 18.32 16.27 18.29C16.71 18.25 17.65 17.67 17.85 17.11C18.06 16.55 18.06 16.07 18 15.98C17.95 15.89 17.34 15.65 17.18 16.14Z"/></svg>
+                    Finalizar Compra por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
