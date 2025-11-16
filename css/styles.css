@@ -254,85 +254,96 @@ h3 { font-size: 1.5rem; }
 /* ------------------------------------------- */
 .banner-carousel {
     position: relative;
+    max-width: 100%;
     overflow: hidden;
-    height: 700px; /* Altura fija para el banner */
-    min-height: 400px;
-    /* margin-top: 0; */
     
-    /* 👇 LÍNEA QUE DEBES AÑADIR PARA ELIMINAR EL ESPACIO SUPERIOR 👇 */
-    /* padding-top: 0; */
+
 }
+
 .carousel-slides {
     display: flex;
-    height: 100%;
     transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que el contenedor de slides use todo el ancho */
+    margin-bottom: 4rem; /* ¡Cambia 2rem por 4rem para duplicar el espacio! */
 }
 
 .carousel-slide {
-    flex: 0 0 100%;
+    min-width: 100%; /* Cada slide ocupa el 100% del ancho del contenedor */
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    height: 40vh; /* Altura responsiva para móvil */
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: var(--color-light);
     text-align: center;
+    position: relative;
 }
 
-/* .slide-1 { background-image: url('../img/banners/banner1.png'); }  */
-.slide-2 { background-image: url('../img/banners/banner2.png'); }
-.slide-3 { background-image: url('../img/banners/banner1.png'); }
+/* Imágenes de fondo de ejemplo (se mantiene) */
+/* Solución para rutas relativas al archivo CSS */
 
+/*  .slide-1 { background-image: url('../img/banners/banner1.png'); } */
+.slide-2 { background-image: url('../img/banners/banner1.png'); }
+.slide-3 { background-image: url('../img/banners/banner2.png'); }
+ 
 .slide-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slide-content {
     position: relative;
     z-index: 10;
-    color: var(--color-white);
-    max-width: 600px;
     padding: 1rem;
 }
 
 .slide-content h2 {
-    font-size: 3rem;
-    color: var(--color-white);
+    font-size: 2rem;
+    color: white;
     margin-bottom: 0.5rem;
 }
 
 .slide-content p {
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 .carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--color-white);
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--color-light);
     border: none;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     cursor: pointer;
     z-index: 20;
-    border-radius: 50%;
-    transition: background var(--transition-duration);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    font-size: 1.5rem;
 }
 
 .carousel-control:hover {
-    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
 }
 
-.prev-btn { left: 1.5rem; }
-.next-btn { right: 1.5rem; }
+.prev-btn {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.next-btn {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
 
 .carousel-dots {
     position: absolute;
@@ -350,15 +361,12 @@ h3 { font-size: 1.5rem; }
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color var(--transition-duration);
+    transition: background-color 0.3s;
 }
 
 .dot.active {
-    background-color: var(--color-white);
-    transform: scale(1.2);
+    background-color: var(--color-secondary); /* Acento en punto activo */
 }
-
-
 
 /* ------------------------------------------- */
 /* --- LISTA DE PRODUCTOS (INDEX y CATÁLOGO) --- */

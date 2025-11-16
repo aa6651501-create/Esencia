@@ -278,9 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Renderizar las reseñas de ejemplo en Index
         const reviewData = [
-            { name: "Sofía M.", stars: 5, text: "La fragancia 'Lirio Dorado' es exquisita, recibo cumplidos todo el tiempo. ¡La recomiendo!" },
-            { name: "Andrés P.", stars: 5, text: "Excelente servicio y 'Mar Azul' huele increíble. La entrega fue muy rápida." },
-            { name: "Valeria C.", stars: 4, text: "El proceso de compra por WhatsApp es muy ágil. 'Aura Noire' es mi nueva favorita." },
+            { name: "— Camilo T., Cliente Verificado", stars: 5, text: "Estaba buscando la Chrome Tradicional EDT por todas partes y la encontré aquí a un precio insuperable. Llegó sellada, totalmente original y la fragancia es perfecta. Me ahorré una buena cantidad comparado con almacenes de cadena."},
+
+            { name: "— Miguel A.", stars: 5, text: "Excelente experiencia comprando mi Versace Pour Homme. Es una fragancia que proyecta mucha frescura y elegancia, y la botella que recibí de Esencia Jade es auténtica en todo sentido. La pedí un martes y me llegó el jueves perfectamente empacada. Los recomiendo por su seriedad y por tener precios tan competitivos en originales." },
+
+            { name: "— Ricardo G", stars: 4, text: "Compro mi Armaf Club de Nuit Intense EDT en Esencia Jade porque sé que es 100% original. Es un perfume que me da mucha seguridad, y encontrarlo a este precio, con envío rápido y garantía de autenticidad, es clave. Llevo dos frascos comprados y el servicio siempre es de primera. Si buscan fragancias de alto impacto sin dudas, este es el lugar." },
         ];
         
         const reviewsSlider = document.querySelector('.reviews-slides');
