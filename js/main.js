@@ -1,5 +1,5 @@
 // Configuración global (usa tu número real aquí)
-const WHATSAPP_PHONE = '573045649705'; // Ejemplo: Código de país + Número
+const WHATSAPP_PHONE = '573237510806'; // Ejemplo: Código de país + Número
 const STORE_NAME = 'Esencia Perfumes';
 const CATALOG_PRODUCTS = [
     { id: 1, name: "Velvet Rose Essence", price: 100000, img: 'img/catalogo/perfumecatalogo1.png', desc: "Dulce y floral, perfecto para destacar con elegancia" },

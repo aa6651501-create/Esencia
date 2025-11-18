@@ -583,40 +583,136 @@ h3 { font-size: 1.5rem; }
 }
 
 /* ------------------------------------------- */
-/* --- FOOTER --- */
+/* --- FOOTER (Diseño Minimalista Profesional) --- */
 /* ------------------------------------------- */
 .footer {
-    background-color: var(--color-primary);
-    color: var(--color-light-text);
-    padding: 2rem 0;
-    text-align: center;
+    background-color: var(--color-primary); /* Negro Profundo */
+    color: var(--color-light-text); /* Texto claro */
+    padding: 3.5rem 0 0; /* Más espacio superior, bottom manejado por footer-bottom */
 }
 
-.footer a {
+/* Estructura de 3 columnas */
+.footer-grid-minimal {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr; /* Info más ancha, Enlaces y Contacto más estrechos */
+    gap: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Línea divisoria sutil */
+}
+
+.footer-col h3 {
     color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
 }
 
-.social-links {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.social-links a {
+/* Estilos de la Columna de Información */
+.footer-info .logo a {
+    color: var(--color-white);
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-info .tagline {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.footer-info .contact-email {
+    font-size: 0.9rem;
+}
+
+/* Estilos de la Columna de Enlaces */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+/* Estilos de los Enlaces y Botones */
+.link-light {
+    color: var(--color-light-text);
     transition: color var(--transition-duration);
 }
 
-.social-links a:hover {
-    color: var(--color-border);
+.link-light:hover {
+    color: var(--color-accent); /* Color de acento claro */
 }
 
-.footer p {
-    font-size: 0.9rem;
-    opacity: 0.8;
+.footer-cta .footer-btn {
+    margin-bottom: 1.5rem; /* Separación entre el botón y las redes */
+    font-weight: 600;
+    padding: 0.8rem 1rem;
 }
 
+/* Redes Sociales Mininalistas */
+.minimal-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0; /* Ya tenemos el margen en el botón superior */
+}
+
+.minimal-social a {
+    color: var(--color-light-text);
+    font-size: 1.5rem; /* Íconos un poco más grandes */
+}
+
+.minimal-social a:hover {
+    color: var(--color-accent);
+}
+
+/* Texto de Copyright */
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    color: var(--color-light-text);
+}
+
+/* --- Adaptación a Móviles (Media Query) --- */
+@media (max-width: 992px) {
+    .footer-grid-minimal {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+    .footer-info {
+        grid-column: 1 / 3; /* La columna de info ocupa todo el ancho */
+        text-align: center;
+    }
+    .footer-info .logo a {
+        justify-content: center;
+    }
+    .footer-info .contact-email {
+        text-align: center;
+    }
+    .minimal-social {
+        justify-content: center; /* Centrar los íconos */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid-minimal {
+        grid-template-columns: 1fr; /* 1 sola columna en móviles pequeños */
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-info, .footer-links, .footer-cta {
+        text-align: center;
+    }
+
+    .footer-links ul {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
 /* ------------------------------------------- */
 /* --- CARRITO FLOTANTE (MODAL) --- */
 /* ------------------------------------------- */
