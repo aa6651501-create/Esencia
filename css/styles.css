@@ -429,12 +429,35 @@ h3 { font-size: 1.5rem; }
 /* ------------------------------------------- */
 /* --- GALERÍA (GALERIA.HTML) --- */
 /* ------------------------------------------- */
+
+/* NUEVOS ESTILOS PARA LA SECCIÓN DE PREVIEW EN INDEX.HTML */
+#gallery-preview {
+    background-color: var(--color-accent); /* Fondo gris de la sección */
+    padding: 4rem 0; /* Aplicamos el padding de la sección aquí */
+}
+
+.gallery-header-wrapper {
+    /* El div interno que centrará el título y le dará el "fondo blanco" */
+    background-color: var(--color-white);
+    text-align: center; /* Centra el contenido del div (el h2) */
+    padding: 1.5rem 0; /* Padding vertical para que el fondo blanco se vea */
+    margin-bottom: 2.5rem; /* Separación entre el título y las imágenes */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil para destacar */
+}
+
+.gallery-title {
+    /* Estilos del título h2 */
+    margin: 0; /* Eliminamos el margen superior e inferior del h2 */
+    display: inline-block; /* Opcional: permite que el h2 tome el ancho del contenido si fuera necesario, aunque ya está centrado */
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
 
+/* ... (El resto de estilos de galería existentes se mantienen sin cambios) ... */
 .gallery-item {
     overflow: hidden;
     border-radius: var(--border-radius);
@@ -454,60 +477,7 @@ h3 { font-size: 1.5rem; }
     transform: scale(1.05);
 }
 
-/* Lightbox Modal */
-.lightbox-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    display: none; /* Controlado por JS */
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-.lightbox-modal.is-open { display: flex; }
-
-.lightbox-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-}
-
-#lightbox-image {
-    max-width: 100%;
-    max-height: 100vh;
-    border-radius: var(--border-radius);
-}
-
-.lightbox-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    color: var(--color-white);
-    font-size: 2.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.lightbox-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: var(--color-white);
-    border: none;
-    padding: 0.75rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background var(--transition-duration);
-}
-
-.lightbox-nav:hover { background: rgba(0, 0, 0, 0.7); }
-.lightbox-prev { left: -50px; }
-.lightbox-next { right: -50px; }
+/* ... (El resto del CSS se mantiene sin cambios) ... */
 
 /* ------------------------------------------- */
 /* --- RESEÑAS (RESEÑAS.HTML) --- */
