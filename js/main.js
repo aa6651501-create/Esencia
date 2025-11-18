@@ -378,8 +378,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         galleryItems.forEach((item, index) => {
             // Reemplazar placeholders con las imágenes reales
-            item.querySelector('img').src = galleryImages[index];
-            item.addEventListener('click', () => openLightbox(index));
+            // NOTA: Si las imágenes no existen en la carpeta img/galeria/, 
+            // se mostrará el error (placeholder).
+            const imgElement = item.querySelector('img');
+            if(imgElement) {
+                imgElement.src = galleryImages[index];
+                item.addEventListener('click', () => openLightbox(index));
+            }
         });
 
         if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
@@ -394,6 +399,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+        
+        // Soporte para teclas de flecha
+        document.addEventListener('keydown', (e) => {
+            if (!lightboxModal.classList.contains('is-open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
     }
 
     // Lógica del Toast (Notificaciones)
