@@ -256,8 +256,6 @@ h3 { font-size: 1.5rem; }
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    
-
 }
 
 .carousel-slides {
@@ -1002,4 +1000,162 @@ h3 { font-size: 1.5rem; }
 
 .lightbox-prev:hover, .lightbox-next:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+/* ------------------------------------------- */
+/* --- PÁGINA EMPRESA (SOBRE NOSOTROS) --- */
+/* ------------------------------------------- */
+
+/* Sección de Historia (Texto + Imagen) */
+.about-story {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.story-content p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--color-secondary);
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+    height: 400px;
+}
+
+/* Misión y Visión (Tarjetas Grandes) */
+.mission-vision-wrapper {
+    background-color: var(--color-accent); /* Fondo Gris Claro */
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.mv-card {
+    background-color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform var(--transition-duration);
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+}
+
+.mv-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.5rem;
+    fill: var(--color-primary);
+}
+
+/* Valores (Grid de 4) */
+.values-section {
+    margin-bottom: 4rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.value-item {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    transition: border-color var(--transition-duration);
+}
+
+.value-item:hover {
+    border-color: var(--color-primary);
+    background-color: #fafafa;
+}
+
+.value-item h3 {
+    font-size: 1.25rem;
+    margin: 1rem 0 0.5rem;
+}
+
+/* Equipo */
+.team-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.team-card {
+    width: 300px;
+    text-align: center;
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--color-accent);
+}
+
+.team-card h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.team-card span {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Responsive para Empresa */
+@media (max-width: 768px) {
+    .about-story {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .story-image img {
+        height: 300px;
+    }
+
+    .mv-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
